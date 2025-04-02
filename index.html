@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codelets - STEM Programs for Kids in Oxford County</title>
+    <title>codelets - STEM Programs for Kids in Oxford County</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;500;700&display=swap"
+        rel="stylesheet">
+        
 
     <style>
         /* --- Brand Colors --- */
@@ -22,14 +26,18 @@
         }
 
         html {
-            height: 100%; /* Ensure html takes full height */
+            height: 100%;
+            /* Ensure html takes full height */
         }
 
         body {
-            font-family: 'Quicksand', sans-serif; /* Default font */
+            font-family: 'Quicksand', sans-serif;
+            /* Default font */
             line-height: 1.6;
-            color: var(--clr-white); /* Default text white for body background */
-            background-color: #111; /* Fallback background */
+            color: var(--clr-white);
+            /* Default text white for body background */
+            background-color: #111;
+            /* Fallback background */
 
             /* --- Full Screen Background Image --- */
             /* Applied to body now */
@@ -38,26 +46,31 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed; /* Keeps background fixed */
+            background-attachment: fixed;
+            /* Keeps background fixed */
 
             /* --- Flexbox Layout for Footer --- */
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body takes at least full viewport height */
+            min-height: 100vh;
+            /* Ensure body takes at least full viewport height */
         }
 
         /* --- Navbar --- */
         .navbar {
             /* Make navbar background more transparent to show body background */
             background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(3px); /* Optional: slight blur */
+            backdrop-filter: blur(3px);
+            /* Optional: slight blur */
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            /* Subtle separator */
         }
 
         .navbar-brand img {
-            max-height: 50px; /* Adjust logo height as needed */
+            max-height: 50px;
+            /* Adjust logo height as needed */
             width: auto;
         }
 
@@ -74,7 +87,8 @@
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            color: var(--clr-white); /* Ensure text is white */
+            color: var(--clr-white);
+            /* Ensure text is white */
             /* Background image is now on body */
         }
 
@@ -88,13 +102,15 @@
         }
 
         .hero-section .subtitle {
-            font-family: 'Quicksand', sans-serif; /* Keep Quicksand */
-            font-size: clamp(1.1em, 3vw, 3rem);
+            font-family: 'Quicksand', sans-serif;
+            /* Keep Quicksand */
+            font-size: clamp(1.1em, 3vw, 2.5rem);
             font-weight: 500;
-            color: var(--clr-light-purple); /* Use brand color */
+            color: var(--clr-light-purple);
+            /* Use brand color */
             max-width: 90%;
-            margin-bottom: 2em;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            margin-bottom: .7em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
 
         .fancy {
@@ -102,27 +118,89 @@
             background: rgb(131 116 196 / 52%);
             padding: 2px 4px;
             border-radius: 4px;
+            color: #e9e8f6;
+        }
+
+        /* --- Program List Styling (Grid Layout - Added) --- */
+        .program-list {
+            /* Container Styling */
+            background-color: rgba(134, 115, 202, 0.15);
+            /* Subtle background for the whole list */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 2em;
+            /* Space before form */
+            max-width: 90%;
+            width: 700px;
+            /* Preferred width, adjust if needed */
+            margin-left: auto;
+            /* Center the container */
+            margin-right: auto;
+
+            /* Grid Layout */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns */
+            gap: 15px;
+            /* Space between grid items */
+        }
+
+        .program-list li {
+            list-style: none;
+            padding: 2px 0;
+            font-size: 0.95em;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            display: flex;
+            /* Use flex to align icon and text */
+            align-items: center;
+            /* Vertically center icon and text */
+        }
+
+        .program-list li i {
+            /* Icon styling */
+            color: var(--clr-lime-green);
+            margin-right: 8px;
+            /* Space between icon and text */
+            font-size: 1.3em;
+            /* Slightly larger icon */
+            flex-shrink: 0;
+            /* Prevent icon from shrinking */
+            width: 1.5em;
+            /* Give icon consistent space */
+            text-align: center;
+        }
+
+        .program-list li span {
+            /* Text takes remaining space */
+            flex-grow: 1;
         }
 
         /* --- Contact Form Styling --- */
         .contact-form-container {
-            background-color: rgba(134, 115, 202, 0.3); /* Semi-transparent medium purple */
+            background-color: rgba(134, 115, 202, 0.3);
+            /* Semi-transparent medium purple */
             padding: 30px 35px;
             border-radius: 15px;
-            backdrop-filter: blur(5px); /* Frosted glass effect */
+            backdrop-filter: blur(5px);
+            /* Frosted glass effect */
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             max-width: 550px;
             width: 95%;
-            color: var(--clr-white); /* Text inside form */
+            color: var(--clr-white);
+            /* Text inside form */
         }
 
         .contact-form-container h2 {
             margin-bottom: 1em;
             font-weight: 700;
             font-size: 1.8em;
-            color: var(--clr-lime-green); /* Bright heading */
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            color: var(--clr-lime-green);
+            /* Bright heading */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .contact-form-container label {
@@ -130,29 +208,39 @@
             margin-bottom: 6px;
             font-weight: 700;
             text-align: left;
-            color: var(--clr-light-purple); /* Lighter label color */
+            color: var(--clr-light-purple);
+            /* Lighter label color */
         }
 
         /* --- Transparent Inputs --- */
         .contact-form-container .form-control {
-            background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
-            border: 1px solid var(--clr-light-purple); /* Light purple border */
-            color: var(--clr-white); /* White text input */
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Transparent white */
+            border: 1px solid var(--clr-light-purple);
+            /* Light purple border */
+            color: var(--clr-white);
+            /* White text input */
             border-radius: 8px;
             padding: 12px;
             transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
-        .contact-form-container .form-control::placeholder { /* Style placeholder text */
-            color: rgba(201, 194, 249, 0.7); /* Lighter placeholder */
-            opacity: 1; /* Override bootstrap default */
+        .contact-form-container .form-control::placeholder {
+            /* Style placeholder text */
+            color: rgba(201, 194, 249, 0.7);
+            /* Lighter placeholder */
+            opacity: 1;
+            /* Override bootstrap default */
         }
 
         .contact-form-container .form-control:focus {
-            background-color: rgba(255, 255, 255, 0.2); /* Slightly less transparent on focus */
-            border-color: var(--clr-lime-green); /* Highlight border on focus */
+            background-color: rgba(255, 255, 255, 0.2);
+            /* Slightly less transparent on focus */
+            border-color: var(--clr-lime-green);
+            /* Highlight border on focus */
             color: var(--clr-white);
-            box-shadow: 0 0 0 3px rgba(221, 239, 114, 0.3); /* Lime green focus shadow */
+            box-shadow: 0 0 0 3px rgba(221, 239, 114, 0.3);
+            /* Lime green focus shadow */
             outline: none;
         }
 
@@ -167,12 +255,12 @@
             color: var(--clr-black);
             padding: 10px 30px;
             border: none;
-            border-radius: 50px; /* Pill shape */
+            border-radius: 50px;
+            /* Pill shape */
             cursor: pointer;
             font-size: 1.1em;
             font-weight: 700;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
             transition: background-color 0.3s ease, transform 0.2s ease;
             margin-top: 1rem;
         }
@@ -180,42 +268,81 @@
         .contact-form-container .btn-submit:hover {
             background-color: var(--clr-white);
             color: var(--clr-medium-purple);
-            transform: scale(1.05); /* Slightly larger on hover */
+            transform: scale(1.05);
+            /* Slightly larger on hover */
         }
 
         /* --- Footer --- */
         .footer {
-             /* Make footer background more transparent */
-             background-color: rgba(0, 0, 0, 0.3);
-             backdrop-filter: blur(3px); /* Match navbar blur */
-             color: rgba(255, 255, 255, 0.7);
-             padding: 1rem 0;
-             font-size: 0.9em;
-             text-align: center;
-             /* Removed margin-top: auto; handled by body flex layout */
-             border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+            /* Make footer background more transparent */
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(3px);
+            /* Match navbar blur */
+            color: rgba(255, 255, 255, 0.7);
+            padding: 1rem 0;
+            font-size: 0.9em;
+            text-align: center;
+            /* Removed margin-top: auto; handled by body flex layout */
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            /* Subtle separator */
+        }
+
+        .footer a {
+            color: var(--clr-lime-green);
         }
 
         .green {
             color: var(--clr-lime-green);
-                }
+        }
 
+        /* Responsive adjustments for the program list grid */
+        @media (max-width: 768px) {
+
+            /* Adjusted breakpoint */
+            .program-list {
+                width: 90%;
+                /* Use more width on medium screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .program-list {
+                grid-template-columns: 1fr;
+                /* Stack to single column */
+                max-width: 95%;
+                width: auto;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .program-list li {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top"> <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="img/var-2.png" alt="Codelets Logo">
-          </a>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/var-2.png" alt="codelets Logo">
+            </a>
         </div>
     </nav>
 
-     <main class="hero-section"> <!--<h1>codelets</h1> -->
+    <main class="hero-section"> <!--<h1>codelets</h1> -->
         <h1>welcome to <span class="green">codelets</span>,</h1>
         <!-- <p class="subtitle"> hands-on coding, robotics and stem for curious kids. </p> -->
-        <p class="subtitle"> hands-on coding, robotics and stem adventures - <span class="fancy">crafted with care for the thinkers, the tinkerers and the curious.</span> </p>
-
+        <p class="subtitle"> hands-on coding, robotics and stem adventures - <span class="fancy">crafted with care for
+                the thinkers, the tinkerers and the curious.</span> </p>
+        <ul class="program-list">
+            <li><i class="bi bi-calendar-week"></i><span>Multi-Week Programs by Age</span></li>
+            <li><i class="bi bi-search"></i><span>Monthly Intro Sessions</span></li>
+            <li><i class="bi bi-building"></i><span>Community & School Outreach</span></li>
+            <li><i class="bi bi-people-fill"></i><span>Codelets Crew Club & Events</span></li>
+        </ul>
         <div class="contact-form-container">
             <h2>say hello</h2>
             <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST" class="needs-validation" novalidate>
@@ -226,49 +353,56 @@
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">email:</label>
-                    <input type="email" class="form-control" id="email" name="email" required placeholder="your.email@example.com">
-                     <div class="invalid-feedback">Please enter a valid email address.</div>
+                    <input type="email" class="form-control" id="email" name="email" required
+                        placeholder="your.email@example.com">
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">message:</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required placeholder="what do you want to be when you grow up?"></textarea>
-                     <div class="invalid-feedback">Please enter your message.</div>
+                    <textarea class="form-control" id="message" name="message" rows="4" required
+                        placeholder="what do you want to be when you grow up?"></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
                 </div>
-                <div class="form-check mb-3 text-start"> <input class="form-check-input" type="checkbox" value="true" id="signupCheck" name="signup_updates"> <label class="form-check-label" for="signupCheck">
-                    yes, sign me up for Codelets news and updates!
-                  </label>
+                <div class="form-check mb-3 text-start"> <input class="form-check-input" type="checkbox" value="true"
+                        id="signupCheck" name="signup_updates"> <label class="form-check-label" for="signupCheck">
+                        yes, sign me up for codelets news and updates!
+                    </label>
                 </div>
-                <button type="submit" class="btn btn-submit">Send Message</button>
+                <button type="submit" class="btn btn-submit">send message</button>
             </form>
         </div>
-    </main> <footer class="footer">
-         <div class="container">
-             &copy; 2025 Codelets | Woodstock, ON & Surrounding Area </div>
-     </footer>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 codelets | oxford county & surrounding areas | <a href="mailto:hello@codelets.ca">hello@codelets.ca</a></div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (() => {
-        'use strict'
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
 
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        const forms = document.querySelectorAll('.needs-validation')
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
 
-        // Loop over them and prevent submission
-        Array.from(forms).forEach(form => {
-          form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-              event.preventDefault()
-              event.stopPropagation()
-            }
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
 
-            form.classList.add('was-validated')
-          }, false)
-        })
-      })()
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
     </script>
 
 </body>
+
 </html>
