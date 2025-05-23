@@ -416,11 +416,7 @@
             <div id="formspree-form-container">
                 <p style="font-size:0.9em; text-align:center; margin-bottom:10px;"><em>Loading registration form for
                 <strong id="formProgramName" style="color:#a076f9;">the selected program</strong>...</em></p>
-                <!-- 
-                    IMPORTANT: Replace "YOUR_FORMSPREE_ENDPOINT_HERE" with your actual Formspree form endpoint.
-                    You will likely want a unique endpoint for each program or a way to identify the program
-                    within a single Formspree form (e.g., using a hidden input field that JavaScript populates).
-                -->
+
                 <form id="sample-formspree-form" action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
                     <input type="hidden" id="programNameInput" name="program_name" value="">
                     <input type="hidden" id="formspreeNextPage" name="_next" value="">
@@ -462,19 +458,19 @@
                     <label for="stem-experience">Does your child have any previous experience with STEM topics (summer
                         camps, city programs, elective classes, etc):</label>
                     <textarea id="stem-experience" name="stem-experience" rows="3"
-                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;"></textarea>
+                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;" required></textarea>
 
                     <label for="allergies">Allergies or Medical Conditions (or N/A):</label>
                     <textarea id="allergies" name="allergies_medical" rows="3"
-                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;"></textarea>
+                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;" required></textarea>
 
                     <label for="additional-notes">Is there anything else you'd like us to know about your
                         child?:</label>
                     <textarea id="additional-notes" name="additional-notes" rows="3"
-                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;"></textarea>
+                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;" required></textarea>
 
                     <label for="photoConsent">
-                        <input type="checkbox" id="photoConsent" name="photo_consent" value="yes" required>
+                        <input type="checkbox" id="photoConsent" name="photo_consent" value="yes">
                         I consent to codelets taking photos/videos of my child for promotional purposes (optional, can
                         be discussed).
                     </label>
