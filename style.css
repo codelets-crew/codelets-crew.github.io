@@ -819,7 +819,7 @@
         .payment-button {
             display: inline-block;
             background-color: var(--clr-lime-green); /* Codelets Yellow */
-            color: var(--clr-light-purple) !important;
+            color: var(--clr-medium-purple) !important;
             padding: 12px 30px;
             text-decoration: none !important;
             font-weight: 600;
@@ -833,6 +833,7 @@
         .payment-button:hover {
             background-color: var(--clr-medium-purple);
             transform: translateY(-2px);
+            color: var(--clr-light-purple) !important;
         }
         .etransfer-details strong {
             color: var(--clr-medium-purple);
