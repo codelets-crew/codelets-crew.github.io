@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXDDTLWE5J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NXDDTLWE5J');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>codelets - STEM Programs for Kids in Oxford County</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">
+                <img src="img/var-2-purplesp.png" alt="codelets Logo">
+            </a>
+            <a class="nav-link" href="/summer-stem-programs.html">REGISTER!</a>
+        </div>
+    </nav>
+    <div class="hero-section">
+        <h1>our summer <span class="green">stem-ventures!</span></h1>
+        <p class="subtitle">Explore our exciting lineup of STEM programs designed to spark creativity and
+            innovation in every child.</p>
+        <div class="program-filter-bar-container">
+            <div class="program-filter-bar">
+                <button class="filter-button active" data-filter="all">All Programs</button>
+                <button class="filter-button" data-filter="classes">Classes</button>
+                <button class="filter-button" data-filter="camps">Camps</button>
+                <button class="filter-button" data-filter="test-lab">Test Lab</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="program-section">
+        <div class="program-block" data-program-type="classes">
+            <div class="program-image">
+                <img src="/img/c-and-g-1.jpg" alt="Sparks & Co. Program Image">
+            </div>
+            <div class="program-details">
+                <h2>Sparks & Co.</h2>
+                <p class="sub-headline">Cooperative STEM exploration for ages 3-5</p>
+                <p>a guided stem journey for our littlest adventurers and their biggest fan <strong>(AGES 3-5)</strong>
+                </p>
+                <div class="program-info-location">
+                    <h3>Weekly Themes:</h3>
+
+                    <div class="weekly-themes-container">
+                        <div class="theme-block">
+                            <span class="theme-icon">
+                                <img src="img/circuits-icon.png">
+                            </span>
+                            <span class="theme-text">
+                                <span class="theme-title">Lights & Dough</span>
+                                <span class="theme-tools">circuits</span>
+                            </span>
+                        </div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/robo-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">My Mouse & Me</span><span
+                                    class="theme-tools">robotics</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/coding-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Daddy Robot</span><span
+                                    class="theme-tools">coding</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/making-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Music Makers</span><span
+                                    class="theme-tools">making</span></span></div>
+                    </div>
+                    <div class="program-info-grid">
+                        <div class="info-item">
+                            <div class="mb-2"><strong>Location:</strong> The Learning Hive (Woodstock)</div>
+                            <div class="mb-2"><strong>Day & Time:</strong> Mondays, 5:15 PM - 6:00 PM</div>
+                            <div><strong>Session 1:</strong> July 7, 14, 21, 28<br><strong>Session 2:</strong> Aug 4,
+                                11, 18, 25</div>
+                        </div>
+                        <div class="info-item blob">
+                            <img src="img/140.png" alt="Program Fee">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="enroll-button"
+                    onclick="openModal('sparks-co-form', 'Sparks & Co. Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block alt" data-program-type="classes">
+            <div class="program-image">
+                <img src="/img/ignite.jpg" alt="Curiosity Ignite Program Image">
+            </div>
+            <div class="program-details">
+                <h2>Curiosity: Ignite!</h2>
+                <p class="sub-headline">Introduce your natural experimenter to the magic of STEM</p>
+                <p>experience playful stem adventures for intrepid explorers <strong>(AGES 5-7)</strong></p>
+                <div class="program-info-location">
+                    <h3>Weekly Themes:</h3>
+
+                    <div class="weekly-themes-container">
+                        <div class="theme-block">
+                            <span class="theme-icon">
+                                <img src="img/circuits-icon.png">
+                            </span>
+                            <span class="theme-text">
+                                <span class="theme-title">Circuit Safari</span>
+                                <span class="theme-tools">circuits</span>
+                            </span>
+                        </div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/robo-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Robot Rally</span><span
+                                    class="theme-tools">robotics</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/coding-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Coding Carnival</span><span
+                                    class="theme-tools">coding</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/making-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Tinker Time</span><span
+                                    class="theme-tools">making</span></span></div>
+                    </div>
+                    <div class="program-info-grid">
+                        <div class="info-item">
+                            <div class="mb-2"><strong>Location:</strong> The Learning Hive (Woodstock)</div>
+                            <div class="mb-2"><strong>Day & Time:</strong> Mondays, 6:15 PM - 7:05 PM</div>
+                            <div><strong>Session 1:</strong> July 7, 14, 21, 28<br><strong>Session 2:</strong> Aug 4,
+                                11, 18, 25</div>
+                        </div>
+                        <div class="info-item blob">
+                            <img src="img/150.png" alt="Program Fee">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="enroll-button"
+                    onclick="openModal('curiosity-ignite-form', 'Curiosity: Ignite! Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block" data-program-type="classes">
+            <div class="program-image">
+                <img src="/img/invent.jpg" alt="Inventors Program Image">
+            </div>
+            <div class="program-details">
+                <h2>Inventors: Create + Connect</h2>
+                <p class="sub-headline">Encourage exploration of all the whys and hows</p>
+                <p>a hands-on stem expedition for curious creators ready to tinker, code, and light things up
+                    <strong>(AGES 7–10)</strong>
+                </p>
+                <div class="program-info-location">
+                    <h3>Weekly Themes:</h3>
+
+                    <div class="weekly-themes-container">
+                        <div class="theme-block">
+                            <span class="theme-icon">
+                                <img src="img/circuits-icon.png">
+                            </span>
+                            <span class="theme-text">
+                                <span class="theme-title">Snap Zone</span>
+                                <span class="theme-tools">circuits</span>
+                            </span>
+                        </div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/robo-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Colour Quest</span><span
+                                    class="theme-tools">robotics</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/coding-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Hello World</span><span
+                                    class="theme-tools">coding</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/making-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Fruity Jams</span><span
+                                    class="theme-tools">making</span></span></div>
+                    </div>
+                    <div class="program-info-grid">
+                        <div class="info-item">
+                            <div class="mb-2"><strong>Location:</strong> Do Good Oxford (Woodstock)</div>
+                            <div class="mb-2"><strong>Day & Time:</strong> Tuesdays, 5 PM - 5:50 PM</div>
+                            <div><strong>Session 1:</strong> July 8, 15, 22, 29<br><strong>Session 2:</strong> Aug 5,
+                                12, 19, 26</div>
+                        </div>
+                        <div class="info-item blob">
+                            <img src="img/150.png" alt="Program Fee">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="enroll-button"
+                    onclick="openModal('inventors-connect-form', 'Inventors: Create + Connect Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block alt" data-program-type="classes">
+            <div class="program-image">
+                <img src="/img/launch.jpg" alt="Go For Launch Program Image">
+            </div>
+            <div class="program-details">
+                <h2>Go For Launch!</h2>
+                <p class="sub-headline">Build a project start to finish, applying new skills each week</p>
+                <p>an immersive STEM quest for big thinkers ready to bring their big ideas to life <strong>(AGES
+                        10–14)</strong></p>
+                <div class="program-info-location">
+                    <h3>Weekly Themes:</h3>
+
+                    <div class="weekly-themes-container">
+                        <div class="theme-block">
+                            <span class="theme-icon">
+                                <img src="img/circuits-icon.png">
+                            </span>
+                            <span class="theme-text">
+                                <span class="theme-title">Power Up</span>
+                                <span class="theme-tools">circuits</span>
+                            </span>
+                        </div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/robo-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Making Moves</span><span
+                                    class="theme-tools">robotics</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/coding-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Logic Loading</span><span
+                                    class="theme-tools">coding</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/making-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Mission Control</span><span
+                                    class="theme-tools">making</span></span></div>
+                    </div>
+                    <div class="program-info-grid">
+                        <div class="info-item">
+                            <div class="mb-2">
+                                <strong>Location:</strong> Do Good Oxford (Woodstock)
+                            </div>
+                            <div class="mb-2">
+                                <strong>Day & Time:</strong> Tuesdays, 6:15 PM - 7:05 PM
+                            </div>
+                            <div>
+                                <strong>Session 1:</strong> July 8, 15, 22, 29<br><strong>Session 2:</strong> Aug 5, 12,
+                                19, 26
+                            </div>
+                        </div>
+                        <div class="info-item blob">
+                            <img src="img/150.png" alt="Program Fee">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="enroll-button"
+                    onclick="openModal('go-for-launch-form', 'Go For Launch Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block" data-program-type="camps">
+            <div class="program-image">
+                <img src="/img/mine-jr.png" alt="Minecraft Jr. Camp">
+            </div>
+            <div class="program-details">
+                <h2>Minecrafters JR: Brick to Build</h2>
+                <p class="sub-headline">From Physical Blocks to Digital Worlds!</p>
+                <p>an opportunity for young creators to build, imagine, and bring their ideas to life <strong>(AGES
+                        4–7)</strong></p>
+                <div class="program-info-grid">
+
+                    <div class="info-item">
+                        <div class="mb-2">
+                            <strong>Location:</strong> Do Good Oxford (Woodstock)
+                        </div>
+                        <div class="mb-2">
+                            <strong>Date:</strong> Monday, July 28
+                        </div>
+                        <div class="mb-2">
+                            <strong>Time:</strong> 9:00 AM - 2:00 PM<br>
+                            (supervised, non-instructional before care available from 8:30)
+                        </div>
+                    </div>
+                    <div class="info-item blob">
+                        <img src="img/80.png" alt="Program Fee">
+                    </div>
+                </div>
+                <a href="#" class="enroll-button"
+                    onclick="openModal('minecraft-jr-form', 'Minecraft Jr. Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block alt" data-program-type="camps">
+            <div class="program-image">
+                <img src="/img/mine-sr.png" alt="Minecraft Sr. Camp">
+            </div>
+            <div class="program-details">
+                <h2>Minecrafters SR: Brick to Build + Command</h2>
+                <p class="sub-headline">From Physical Blocks to Digital Worlds!</p>
+                <p>an engaging build and code challenge where imagination meets engineering, and the physical world
+                    becomes digital <strong>(AGES
+                        8-12)</strong></p>
+                <div class="program-info-grid">
+
+                    <div class="info-item">
+                        <div class="mb-2">
+                            <strong>Location:</strong> Do Good Oxford (Woodstock)
+                        </div>
+                        <div class="mb-2">
+                            <strong>Date:</strong> Tuesday, July 29
+                        </div>
+                        <div class="mb-2">
+                            <strong>Time:</strong> 9:00 AM - 2:00 PM<br>
+                            (supervised, non-instructional before care available from 8:30)
+                        </div>
+                    </div>
+                    <div class="info-item blob">
+                        <img src="img/80.png" alt="Program Fee">
+                    </div>
+                </div>
+                <a href="#" class="enroll-button"
+                    onclick="openModal('minecraft-sr-form', 'Minecraft Sr. Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block" data-program-type="camps">
+            <div class="program-image">
+                <img src="/img/cardboard.png" alt="Cardboard Creators Camp">
+            </div>
+            <div class="program-details">
+                <h2>Cardboard Creators: Cityscape</h2>
+                <p class="sub-headline">From Physical Blocks to Digital Worlds!</p>
+                <p>an immersive city-building experience powered by code, collaboration and plenty of cardboard
+                    <strong>(AGES
+                        9-13)</strong>
+                </p>
+                <div class="program-info-grid">
+
+                    <div class="info-item">
+                        <div class="mb-2">
+                            <strong>Location:</strong> Do Good Oxford (Woodstock)
+                        </div>
+                        <div class="mb-2">
+                            <strong>Dates:</strong> Tuesday, August 19 - Thursday, August 21
+                        </div>
+                        <div class="mb-2">
+                            <strong>Time:</strong> 9:00 AM - 2:00 PM<br>
+                            (supervised, non-instructional before care available from 8:30)
+                        </div>
+                    </div>
+                    <div class="info-item blob">
+                        <img src="img/155.png" alt="Program Fee">
+                    </div>
+                </div>
+                <a href="#" class="enroll-button"
+                    onclick="openModal('cardboard-creators-form', 'Cardboard Creators Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+        <div class="program-block" data-program-type="test-lab">
+            <div class="program-image">
+                <img src="/img/test-lab.jpg" alt="Test Lab">
+            </div>
+            <div class="program-details">
+                <h2>codelets Test Lab</h2>
+                <p class="sub-headline">Join us for a selection of themed stem explorations and experiments</p>
+                <p>share a moment (or two) of wonder with us: codelets test lab sessions offer something special for
+                    every age and stage, from 3 to 103</p>
+                <div class="program-info-grid">
+
+                    <div class="info-item">
+                        <div class="mb-2">
+                            <strong>Location:</strong> Do Good Oxford (Woodstock)
+                        </div>
+                        <div class="mb-2">
+                            <strong>Dates:</strong> Tuesdays - June 10, 17 & 24
+                        </div>
+                        <div class="mb-2">
+                            <strong>Time:</strong> 4:30 PM - 6:00 PM<br>
+                            (arrive anytime, stay as long as you like)
+                        </div>
+                    </div>
+                    <div class="info-item blob">
+                        <img src="img/20.png" alt="Program Fee">
+                    </div>
+                </div>
+                <a href="#" class="enroll-button"
+                    onclick="openModal('test-lab-form', 'Test Lab Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    Now!</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="registrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Program Registration</h3>
+            <p>Please fill out the form below to register. Payment can be made via Square or e-transfer (details will be
+                provided upon submission or in your confirmation email).</p>
+            <div id="formspree-form-container">
+                <p style="font-size:0.9em; text-align:center; margin-bottom:10px;"><em>Loading registration form for
+                <strong id="formProgramName" style="color:#a076f9;">the selected program</strong>...</em></p>
+                <!-- 
+                    IMPORTANT: Replace "YOUR_FORMSPREE_ENDPOINT_HERE" with your actual Formspree form endpoint.
+                    You will likely want a unique endpoint for each program or a way to identify the program
+                    within a single Formspree form (e.g., using a hidden input field that JavaScript populates).
+                -->
+                <form id="sample-formspree-form" action="YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+                    <input type="hidden" id="programNameInput" name="program_name" value="">
+                    <input type="hidden" id="formspreeNextPage" name="_next" value="">
+
+                    <label for="parentName">Parent's Full Name:</label>
+                    <input type="text" id="parentName" name="parent_name" required>
+
+                    <label for="email">Parent's Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Parent's Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="childName">Child's Full Name:</label>
+                    <input type="text" id="childName" name="child_name" required>
+
+                    <label for="childAge">Child's Age (at time of program):</label>
+                    <input type="number" id="childAge" name="child_age" required min="3" max="14">
+
+                    <div id="sessionSelectClassesDiv" style="display:none;">
+                        <label for="sessionSelectClasses">Select Session:</label>
+                        <select id="sessionSelectClasses" name="selected_session_class">
+                            <option value="">--Please choose a session--</option>
+                            <option value="session1_july">Session 1 (July)</option>
+                            <option value="session2_august">Session 2 (August)</option>
+                        </select>
+                    </div>
+
+                    <div id="sessionSelectTestLabDiv" style="display:none;">
+                        <label for="sessionSelectTestLab">Select Test Lab Date:</label>
+                        <select id="sessionSelectTestLab" name="selected_session_test_lab">
+                            <option value="">--Please choose a date--</option>
+                            <option value="june10">June 10</option>
+                            <option value="june17">June 17</option>
+                            <option value="june24">June 24</option>
+                        </select>
+                    </div>
+
+                    <label for="stem-experience">Does your child have any previous experience with STEM topics (summer
+                        camps, city programs, elective classes, etc):</label>
+                    <textarea id="stem-experience" name="stem-experience" rows="3"
+                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;"></textarea>
+
+                    <label for="allergies">Allergies or Medical Conditions (or N/A):</label>
+                    <textarea id="allergies" name="allergies_medical" rows="3"
+                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;"></textarea>
+
+                    <label for="additional-notes">Is there anything else you'd like us to know about your
+                        child?:</label>
+                    <textarea id="additional-notes" name="additional-notes" rows="3"
+                        style="width: calc(100% - 20px); padding: 10px; margin-bottom:15px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif;"></textarea>
+
+                    <label for="photoConsent">
+                        <input type="checkbox" id="photoConsent" name="photo_consent" value="yes" required>
+                        I consent to codelets taking photos/videos of my child for promotional purposes (optional, can
+                        be discussed).
+                    </label>
+                    <br><br>
+
+                    <button type="submit" class="enroll-button">Submit Registration</button>
+                </form>
+                <p style="font-size:0.9em; margin-top:20px; text-align:center;">After submission you will be redirected
+                    to a page with payment options. Your registration is not complete until payment is received. We will
+                    contact you with confirmation of enrollment within 24 hours of payment.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Codelets. All Rights Reserved. Serving Oxford County.</p>
+        <p><a href="https://www.codelets.ca/privacy-policy.html">Privacy Policy</a> | <a
+                href="https://www.codelets.ca/terms-of-service.html">Terms of Service</a></p>
+    </div>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const programBlocks = document.querySelectorAll('.program-block');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Manage active button state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    programBlocks.forEach(block => {
+                        const programType = block.getAttribute('data-program-type');
+                        if (filterValue === 'all' || programType === filterValue) {
+                            block.classList.remove('hidden');
+                            block.style.display = 'flex'; // Ensure it's visible and uses flex
+                        } else {
+                            block.classList.add('hidden');
+                            block.style.display = 'none'; // Explicitly hide
+                        }
+                    });
+                });
+            });
+        });
+
+        const modal = document.getElementById('registrationModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const formProgramNameDisplay = document.getElementById('formProgramName');
+        const programNameInput = document.getElementById('programNameInput'); // Hidden input in the form
+        const sampleForm = document.getElementById('sample-formspree-form');
+
+        const sessionSelectClassesDiv = document.getElementById('sessionSelectClassesDiv');
+        const sessionSelectTestLabDiv = document.getElementById('sessionSelectTestLabDiv');
+
+        const formspreeEndpoints = {
+            'sparks-co-form': 'xzzrqwrz', // Replace with actual
+            'curiosity-ignite-form': 'movdzbde', // Replace
+            'inventors-connect-form': 'xgvkbqkk',
+            'go-for-launch-form': 'xkgraerz',
+            'minecraft-jr-form': 'xrbqvdqo', // Replace
+            'minecraft-sr-form': 'mjkwdzwz',
+            'cardboard-creators-form': 'xdkgvjgv',
+            'test-lab-form': 'xanozkog' // If applicable for Test Lab
+        };
+
+        function openModal(formId, programNameForDisplay, programType) {
+            const programNameClean = programNameForDisplay.replace(' Registration', '');
+
+            modalTitle.textContent = programNameForDisplay;
+            formProgramNameDisplay.textContent = programNameClean;
+            programNameInput.value = programNameClean; // Set the value for the hidden input
+
+            // Set the correct Formspree endpoint for the form
+            if (formspreeEndpoints[formId]) {
+                sampleForm.action = `https://formspree.io/f/${formspreeEndpoints[formId]}`;
+            } else {
+                // Fallback or default endpoint if a specific one isn't found
+                // It's better to ensure all formIds have a corresponding endpoint
+                sampleForm.action = 'YOUR_DEFAULT_FORMSPREE_ENDPOINT_HERE';
+                console.warn(`No specific Formspree endpoint found for formId: ${formId}. Using default.`);
+            }
+
+            // Conditionally show/hide session selects
+            sessionSelectClassesDiv.style.display = 'none';
+            sessionSelectTestLabDiv.style.display = 'none';
+
+            if (programType === 'classes') {
+                sessionSelectClassesDiv.style.display = 'block';
+            } else if (programType === 'test-lab') {
+                sessionSelectTestLabDiv.style.display = 'block';
+            }
+
+            const nextPageInput = document.getElementById('formspreeNextPage');
+            // Create a mapping for your payment pages
+            const paymentPages = {
+                'sparks-co-form': 'https://www.codelets.ca/thanks-sparks.html',
+                'curiosity-ignite-form': 'https://www.codelets.ca/thanks-ignite.html',
+                'inventors-connect-form': 'https://www.codelets.ca/thanks-invent.html',
+                'go-for-launch-form': 'https://www.codelets.ca/thanks-launch.html',
+                'minecraft-jr-form': 'https://www.codelets.ca/thanks-mine-jr.html', 
+                'minecraft-sr-form': 'https://www.codelets.ca/thanks-mine-sr.html',
+                'cardboard-creators-form': 'https://www.codelets.ca/thanks-cardboard.html',
+                'test-lab-form': 'https://www.codelets.ca/thanks-lab.html'
+            };
+
+            if (paymentPages[formId]) {
+                nextPageInput.value = paymentPages[formId];
+            } else {
+                nextPageInput.value = 'https://www.codelets.ca/thanks-generic.html'; // A generic thank you if no specific page
+            }
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

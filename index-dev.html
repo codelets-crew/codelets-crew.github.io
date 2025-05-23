@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXDDTLWE5J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NXDDTLWE5J');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>codelets - STEM Programs for Kids in Oxford County</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+
+
+    <style>
+       
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/var-2-purplesp.png" alt="codelets Logo">
+            </a>
+            <a class="nav-link" href="/summer-stem-programs.html">REGISTER!</a>
+        </div>
+    </nav>
+
+    <main class="hero-section"> <!--<h1>codelets</h1> -->
+        <h1>welcome to <span class="green">codelets</span>,</h1>
+        <!-- <p class="subtitle"> hands-on coding, robotics and stem for curious kids. </p> -->
+        <p class="subtitle"> hands-on coding, robotics and stem adventures - <span class="fancy">crafted with care for
+                the thinkers, the tinkerers and the curious.</span> </p>
+        <ul class="program-list">
+            <li><i class="bi bi-calendar-week"></i><span>Multi-Week Programs by Age</span></li>
+            <li><i class="bi bi-search"></i><span>Monthly Intro Sessions</span></li>
+            <li><i class="bi bi-building"></i><span>Community & School Outreach</span></li>
+            <li><i class="bi bi-people-fill"></i><span>Codelets Crew Club & Events</span></li>
+        </ul>
+        <div class="contact-form-container">
+            <h2>say hello</h2>
+
+            <form id="contactForm" action="https://formspree.io/f/mvgkwkal" method="POST" class="needs-validation"
+                novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required placeholder="your name">
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required
+                        placeholder="your.email@example.com">
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required
+                        placeholder="what do you want to be when you grow up?"></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <div class="form-check mb-3 text-start">
+                    <input class="form-check-input" type="checkbox" value="true" id="signupCheck" name="signup_updates">
+                    <label class="form-check-label" for="signupCheck">
+                        yes, sign me up for codelets news and updates!
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-submit">send message</button>
+            </form>
+
+            <div id="form-status" role="alert" style="display: none;">
+            </div>
+
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 codelets | oxford county & surrounding areas | <a
+                href="mailto:hello@codelets.ca">hello@codelets.ca</a></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+
+            // --- AJAX Form Submission (Added) ---
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('form-status');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault(); // Stop default browser submission
+
+                    // Check Bootstrap validation status first
+                    if (!contactForm.checkValidity()) {
+                        event.stopPropagation();
+                        contactForm.classList.add('was-validated'); // Ensure validation styles show
+                        return; // Stop if form is invalid
+                    }
+
+                    const formData = new FormData(contactForm);
+                    const formAction = contactForm.getAttribute('action'); // Get URL from form action
+                    const originalButtonText = submitButton.textContent;
+
+                    // Disable button and show submitting state
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+                    formStatus.style.display = 'none'; // Hide previous status
+                    formStatus.className = ''; // Reset status classes
+
+
+                    fetch(formAction, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json' // Formspree needs this for AJAX
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            // Success
+                            formStatus.textContent = "Thanks! Your message has been sent successfully.";
+                            formStatus.className = 'success'; // Add success class for styling
+                            formStatus.style.display = 'block'; // Show status message
+                            contactForm.reset(); // Clear the form fields
+                            contactForm.classList.remove('was-validated'); // Reset validation state
+                            // Optional: Hide the form itself after success
+                            // contactForm.style.display = 'none';
+                        } else {
+                            // Handle server errors (e.g., Formspree error)
+                            response.json().then(data => {
+                                // Try to get specific error from Formspree response
+                                let errorMessage = "Oops! There was a problem submitting your form.";
+                                if (data && data.errors) {
+                                    errorMessage = data.errors.map(error => error.message).join(", ");
+                                }
+                                formStatus.textContent = errorMessage;
+                                formStatus.className = 'error'; // Add error class
+                                formStatus.style.display = 'block';
+                            })
+                        }
+                    }).catch(error => {
+                        // Handle network errors
+                        formStatus.textContent = "Oops! There was a network error submitting your form.";
+                        formStatus.className = 'error';
+                        formStatus.style.display = 'block';
+                    }).finally(() => {
+                        // Re-enable button regardless of outcome
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                    });
+                });
+            }
+        })()
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,984 @@
+ /* --- Brand Colors --- */
+ :root {
+     --clr-light-purple: #c9c2f9;
+     --clr-medium-purple: #8673ca;
+     --clr-lime-green: #ddef72;
+     --clr-black: #1a1a1a;
+     --clr-white: #ffffff;
+ }
+
+ html {
+     height: 100%;
+     /* Ensure html takes full height */
+ }
+
+ body {
+     font-family: 'Quicksand', sans-serif;
+     /* Default font */
+     line-height: 1.6;
+     color: var(--clr-white);
+     /* Default text white for body background */
+     background-color: #111;
+     /* Fallback background */
+
+     /* --- Full Screen Background Image --- */
+     /* Applied to body now */
+     /* Replace with your galaxy image URL */
+     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     /* Keeps background fixed */
+
+     /* --- Flexbox Layout for Footer --- */
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+     /* Ensure body takes at least full viewport height */
+ }
+
+ /* --- Navbar --- */
+ .navbar {
+     /* Make navbar background more transparent to show body background */
+     background-color: rgba(0, 0, 0, 0.3);
+     backdrop-filter: blur(3px);
+     /* Optional: slight blur */
+     padding: .5rem 150px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     /* Subtle separator */
+
+ }
+
+ .navbar-brand img {
+     max-height: 50px;
+     /* Adjust logo height as needed */
+     width: auto;
+ }
+
+ .nav-link {
+     background-color: var(--clr-lime-green);
+     /* codelets lime */
+     color: var(--clr-medium-purple);
+     ;
+     padding: 0.5rem 1rem;
+     border-radius: 8px;
+     font-weight: 600;
+     text-decoration: none;
+     transition: background 0.3s;
+     font-size: 1.3em;
+ }
+
+ .nav-link:hover {
+     background-color: #c6dc4e;
+ }
+
+ /* --- Hero Section --- */
+ .hero-section {
+     /* Takes up remaining vertical space */
+     flex-grow: 1;
+
+     /* Keep centering styles */
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 40px 20px;
+     color: var(--clr-white);
+     /* Ensure text is white */
+     /* Background image is now on body */
+ }
+
+ .hero-section h1,
+ .program-section-title {
+     font-family: 'Fredoka One', cursive;
+     font-size: clamp(3.5em, 6vw, 4.5em);
+     color: var(--clr-light-purple);
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+     margin-bottom: 0;
+     line-height: 1.1;
+ }
+
+ .hero-section .subtitle,
+ .program-section-subtitle {
+     font-family: 'Quicksand', sans-serif;
+     /* Keep Quicksand */
+     font-size: clamp(1.1em, 3vw, 2.5rem);
+     font-weight: 500;
+     color: var(--clr-light-purple);
+     /* Use brand color */
+     max-width: 90%;
+     margin-bottom: .7em;
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+ }
+
+ .fancy {
+     text-shadow: 0px 0px 5px rgba(203, 194, 253, 0.2);
+     background: rgb(131 116 196 / 52%);
+     padding: 2px 4px;
+     border-radius: 4px;
+     color: #e9e8f6;
+ }
+
+ .inner-top {
+     flex-grow: 1;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     padding: 40px 20px;
+     color: var(--clr-white);
+ }
+
+ /* --- Program List Styling (Grid Layout - Added) --- */
+ .program-list {
+     /* Container Styling */
+     background-color: rgba(134, 115, 202, 0.15);
+     /* Subtle background for the whole list */
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     border-radius: 10px;
+     padding: 15px;
+     margin-bottom: 2em;
+     /* Space before form */
+     max-width: 90%;
+     width: 700px;
+     /* Preferred width, adjust if needed */
+     margin-left: auto;
+     /* Center the container */
+     margin-right: auto;
+
+     /* Grid Layout */
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     /* 2 columns */
+     gap: 15px;
+     /* Space between grid items */
+ }
+
+ .program-list li {
+     list-style: none;
+     padding: 2px 0;
+     font-size: 0.95em;
+     font-weight: 500;
+     color: rgba(255, 255, 255, 0.95);
+     text-align: center;
+     display: flex;
+     /* Use flex to align icon and text */
+     align-items: center;
+     /* Vertically center icon and text */
+ }
+
+ .program-list li i {
+     /* Icon styling */
+     color: var(--clr-lime-green);
+     margin-right: 8px;
+     /* Space between icon and text */
+     font-size: 1.3em;
+     /* Slightly larger icon */
+     flex-shrink: 0;
+     /* Prevent icon from shrinking */
+     width: 1.5em;
+     /* Give icon consistent space */
+     text-align: center;
+ }
+
+ .program-list li span {
+     /* Text takes remaining space */
+     flex-grow: 1;
+ }
+
+ /* --- Contact Form Styling --- */
+ .contact-form-container {
+     background-color: rgba(134, 115, 202, 0.3);
+     /* Semi-transparent medium purple */
+     padding: 30px 35px;
+     border-radius: 15px;
+     backdrop-filter: blur(5px);
+     /* Frosted glass effect */
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+     max-width: 550px;
+     width: 95%;
+     color: var(--clr-white);
+     /* Text inside form */
+ }
+
+ .contact-form-container h2 {
+     margin-bottom: 1em;
+     font-weight: 700;
+     font-size: 1.8em;
+     color: var(--clr-lime-green);
+     /* Bright heading */
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+ }
+
+ .contact-form-container label {
+     display: block;
+     margin-bottom: 6px;
+     font-weight: 700;
+     text-align: left;
+     color: var(--clr-light-purple);
+     /* Lighter label color */
+ }
+
+ /* --- Transparent Inputs --- */
+ .contact-form-container .form-control {
+     background-color: rgba(255, 255, 255, 0.1);
+     /* Transparent white */
+     border: 1px solid var(--clr-light-purple);
+     /* Light purple border */
+     color: var(--clr-white);
+     /* White text input */
+     border-radius: 8px;
+     padding: 12px;
+     transition: background-color 0.3s ease, border-color 0.3s ease;
+ }
+
+ .contact-form-container .form-control::placeholder {
+     /* Style placeholder text */
+     color: rgba(201, 194, 249, 0.7);
+     /* Lighter placeholder */
+     opacity: 1;
+     /* Override bootstrap default */
+ }
+
+ .contact-form-container .form-control:focus {
+     background-color: rgba(255, 255, 255, 0.2);
+     /* Slightly less transparent on focus */
+     border-color: var(--clr-lime-green);
+     /* Highlight border on focus */
+     color: var(--clr-white);
+     box-shadow: 0 0 0 3px rgba(221, 239, 114, 0.3);
+     /* Lime green focus shadow */
+     outline: none;
+ }
+
+ .contact-form-container textarea.form-control {
+     resize: vertical;
+     min-height: 120px;
+ }
+
+ /* --- Button Styling --- */
+ .contact-form-container .btn-submit {
+     background-color: var(--clr-lime-green);
+     color: var(--clr-black);
+     padding: 10px 30px;
+     border: none;
+     border-radius: 50px;
+     /* Pill shape */
+     cursor: pointer;
+     font-size: 1.1em;
+     font-weight: 700;
+     letter-spacing: 0.5px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+     margin-top: 1rem;
+ }
+
+ .contact-form-container .btn-submit:hover {
+     background-color: var(--clr-white);
+     color: var(--clr-medium-purple);
+     transform: scale(1.05);
+     /* Slightly larger on hover */
+ }
+
+ /* --- Footer --- */
+ .footer {
+     /* Make footer background more transparent */
+     background-color: rgba(0, 0, 0, 0.3);
+     backdrop-filter: blur(3px);
+     /* Match navbar blur */
+     color: rgba(255, 255, 255, 0.7);
+     padding: 1rem 0;
+     font-size: 0.9em;
+     text-align: center;
+     /* Removed margin-top: auto; handled by body flex layout */
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+     /* Subtle separator */
+ }
+
+ .footer a {
+     color: var(--clr-lime-green);
+ }
+
+ .green {
+     color: var(--clr-lime-green);
+ }
+
+
+
+ /******************************* PROGRAMS *********************************/
+ /* Filter Bar Styles */
+ .program-filter-bar-container {
+     /* Added a container to center the group */
+     text-align: center;
+     margin-bottom: 0px;
+     padding: 0 20px;
+ }
+
+ .program-filter-bar {
+     display: inline-flex;
+     /* Makes the group of buttons behave as one unit */
+     border-radius: 25px;
+     /* Increased for a more pronounced pill shape */
+     overflow: hidden;
+     /* Ensures inner button corners don't stick out */
+     border: 1px solid var(--clr-medium-purple);
+     /* Border for the whole group */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     /* Subtle shadow for depth */
+ }
+
+ .filter-button {
+     background-color: #f0eaff;
+     /* Slightly lighter for better contrast with purple text */
+     color: var(--clr-medium-purple);
+     border: none;
+     /* Remove individual borders */
+     border-right: 1px solid #c8b8e4;
+     /* Lighter separator for a softer look */
+     padding: 22px 42px;
+     /* Increased padding */
+     margin: 0;
+     /* Remove individual margins */
+     cursor: pointer;
+     font-weight: 500;
+     font-size: 1.2em;
+     /* Increased font size */
+     transition: background-color 0.3s ease, color 0.3s ease;
+     line-height: 1.4;
+     /* Adjusted for better vertical centering with new padding */
+ }
+
+ .filter-button:last-child {
+     border-right: none;
+     /* No right border for the last button */
+ }
+
+ .filter-button:hover {
+     background-color: var(--clr-light-purple);
+ }
+
+ .filter-button.active {
+     background-color: var(--clr-medium-purple);
+     color: white;
+     border-color: var(--clr-medium-purple);
+     /* Ensure active border is also prominent if it had one */
+ }
+
+ .program-section-title {
+     /* Added a title for the whole programs page */
+     text-align: center;
+     margin-top: 40px;
+
+ }
+
+ .program-section {
+     max-width: 1500px;
+     /* Slightly wider for better spacing */
+     margin: 20px auto 40px auto;
+     /* Adjusted margins */
+     padding: 20px;
+     /* Removed background-color and box-shadow from here to apply to individual blocks if desired, or keep it clean */
+     overflow: hidden;
+     /* Clear floats */
+ }
+
+ .program-block {
+     display: flex;
+     flex-wrap: wrap;
+     /* Allow wrapping on smaller screens */
+     align-items: center;
+     margin-bottom: 50px;
+     /* Increased space between program blocks */
+     padding: 25px;
+     /* Added padding to the block itself */
+     background-image: url("img/bg.png");
+     border-radius: 12px;
+     /* More pronounced rounded corners */
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+     /* Softer shadow */
+     border-bottom: none;
+     /* Removed individual border, block has its own background */
+ }
+
+ .program-block:last-child {
+     margin-bottom: 0;
+ }
+
+ .program-image {
+     flex: 0 0 35%;
+     /* Adjusted split slightly */
+     padding-right: 25px;
+     /* Space between image and text */
+     box-sizing: border-box;
+ }
+
+ .program-image img {
+     width: 100%;
+     height: auto;
+     border-radius: 10px;
+     /* Rounded corners for images */
+     display: block;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ }
+
+ .program-details {
+     flex: 0 0 65%;
+     /* Adjusted split slightly */
+     padding-left: 25px;
+     /* Space between image and text */
+     box-sizing: border-box;
+ }
+
+ .program-info-location {
+     background-color: var(--clr-light-purple);
+     padding: 15px;
+     border-radius: 10px;
+ }
+
+ .weekly-themes-container {
+     /* Container for the theme blocks */
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     /* Responsive columns */
+     gap: 15px;
+     margin-bottom: 25px;
+ }
+
+ .theme-block {
+     /* Styling for each weekly theme block */
+     background-color: var(--clr-lime-green);
+     /* Light purple, similar to IG blocks */
+     padding: 5px;
+     border-radius: 10px;
+     font-size: 0.95em;
+     color: #343a40;
+     min-height: 60px;
+     /* Ensure some height */
+     display: flex;
+     /* For icon alignment */
+     align-items: center;
+     /* For icon alignment */
+ }
+
+ .theme-block .theme-icon {
+     /* Placeholder for icons */
+     margin-right: 10px;
+     font-size: 1.5em;
+     /* Example size for emoji icon */
+     color: var(--clr-medium-purple);
+ }
+
+ .theme-block .theme-icon img {
+     width: 70px;
+     height: auto;
+ }
+
+ .theme-block .theme-title {
+     font-weight: 600;
+     display: block;
+     margin-bottom: 0px;
+ }
+
+ .theme-block .theme-tools {
+     font-size: 0.85em;
+     color: #555;
+     font-family: fredoka;
+     text-transform: uppercase;
+ }
+
+ /* Alternating layout */
+ .program-block.alt .program-image {
+     order: 2;
+     /* Image on the right */
+     padding-right: 0;
+     padding-left: 25px;
+ }
+
+ .program-block.alt .program-details {
+     order: 1;
+     /* Text on the left */
+     padding-left: 0;
+     padding-right: 25px;
+ }
+
+ .program-details h2 {
+     font-size: 3.5em;
+     /* Adjusted for Poppins */
+     color: var(--clr-medium-purple);
+     /* Codelets Primary Purple for program titles */
+     font-family: 'Fredoka', sans-serif;
+     text-transform: lowercase;
+     margin-top: 0;
+     margin-bottom: 2px;
+     font-weight: 600;
+ }
+
+ .program-details .sub-headline {
+     font-size: 1.5em;
+     font-weight: 600;
+     color: var(--clr-lime-green);
+     margin-bottom: 0px;
+     text-transform: uppercase;
+     background: rgb(131 116 196 / 73%);
+ }
+
+ .program-details h3 {
+     color: #fff !important;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+     font-weight: bold;
+     margin-bottom: .5em;
+ }
+
+ .program-details p {
+     line-height: 1.7;
+     /* Increased line height for Poppins */
+     margin-bottom: 12px;
+     font-size: 1.4em;
+     /* Standard size */
+     color: #000;
+ }
+
+ .program-details ul {
+     list-style: none;
+     /* Removing default bullets for custom styling if desired, or use 'disc' */
+     padding-left: 0;
+     margin-bottom: 18px;
+ }
+
+ .program-details ul li {
+     padding-left: 20px;
+     position: relative;
+     margin-bottom: 8px;
+     line-height: 1.6;
+ }
+
+ .program-details ul li::before {
+     /* Custom bullet style */
+     content: '⭐';
+     /* Using a star like on your site, or '✓' or '●' */
+     color: var(--clr-lime-green);
+     /* Codelets Yellow */
+     position: absolute;
+     left: 0;
+     font-size: 14px;
+     /* Adjust size of the icon */
+ }
+
+ .program-info-grid {
+     display: flex;
+     /* CHANGED to flex */
+     flex-wrap: wrap;
+     /* ADDED to allow rows */
+     gap: 12px;
+     /* ADDED for spacing between items */
+     margin-bottom: 25px;
+     font-size: 1em;
+     background-color: var(--clr-medium-purple);
+     padding: 15px;
+     border-radius: 8px;
+     align-items: center;
+     /* Vertically center items in each row */
+ }
+
+ .info-item {
+     box-sizing: border-box;
+     flex: 1.2;
+     padding: 5px;
+     /* Inner padding for content within the item */
+
+ }
+
+ .program-session-dates-item {
+     text-align: left;
+ }
+
+ .info-item strong {
+     color: var(--clr-lime-green);
+     /* Primary Purple for strong tags */
+     font-weight: 600;
+ }
+
+ .program-info-grid .blob {
+     position: relative;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     background-color: transparent !important;
+     min-height: 120px;
+     flex: .8;
+ }
+
+ .program-info-grid .blob img {
+     max-width: 100%;
+     max-height: 150px;
+     height: auto;
+     display: block;
+     object-fit: contain;
+ }
+
+
+ .enroll-button {
+     display: inline-block;
+     background-color: var(--clr-lime-green);
+     /* Codelets Yellow */
+     color: #544004 !important;
+     /* Darker text for yellow button, as on your site */
+     padding: 12px 30px;
+     /* Adjusted padding */
+     text-decoration: none !important;
+     font-weight: 600;
+     /* Bolder */
+     border-radius: 8px;
+     text-align: center;
+     margin-top: 20px;
+     transition: background-color 0.2s ease, transform 0.2s ease;
+     border: 3px solid var(--clr-medium-purple);
+     cursor: pointer;
+     font-size: 1.5em;
+     float: right;
+ }
+
+ .alt .enroll-button {
+     float: none;
+ }
+
+ .enroll-button:hover {
+     background-color: var(--clr-light-purple);
+     /* Darker yellow on hover */
+     transform: translateY(-2px);
+     /* Slight lift effect */
+ }
+
+ /* Basic Modal Styles (you'll need JavaScript for full functionality) */
+ .modal {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     z-index: 1000;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+     background-color: rgba(0, 0, 0, 0.6);
+     /* Darker Dim background */
+ }
+
+ .modal-content {
+     background-color: #ffffff;
+     margin: 8% auto;
+     /* Adjusted margin */
+     padding: 30px;
+     /* Increased padding */
+     border: none;
+     width: 80%;
+     /*max-width: 550px; */
+     /* Slightly wider modal */
+     border-radius: 10px;
+     position: relative;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .modal-content h3 {
+     color: var(--clr-medium-purple);
+     font-weight: 600;
+     margin-top: 0;
+     margin-bottom: 15px;
+     font-size: 1.6em;
+ }
+
+ .modal-content p {
+     font-size: 1em;
+     line-height: 1.6;
+     margin-bottom: 15px;
+     color: #000;
+ }
+
+ .modal-content label {
+     font-weight: 500;
+     display: block;
+     margin-bottom: 5px;
+     color: #555;
+ }
+
+ .modal-content input[type="email"],
+ .modal-content input[type="text"],
+ .modal-content input[type="tel"],
+ .modal-content input[type="number"],
+ .modal-content select {
+     width: calc(100% - 20px);
+     /* Full width minus padding */
+     padding: 10px;
+     margin-bottom: 15px;
+     border: 1px solid #ccc;
+     border-radius: 6px;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .modal-content .enroll-button {
+     /* Style submit button inside modal */
+     background-color: var(--clr-medium-purple);
+     color: white !important;
+     width: 100%;
+ }
+
+ .modal-content .enroll-button:hover {
+     background-color: var(--clr-medium-purple);
+ }
+
+ .close-button {
+     color: #999;
+     float: right;
+     font-size: 32px;
+     font-weight: bold;
+     position: absolute;
+     top: 10px;
+     right: 20px;
+     line-height: 1;
+ }
+
+ .close-button:hover,
+ .close-button:focus {
+     color: #333;
+     text-decoration: none;
+     cursor: pointer;
+ }
+
+ /************************** THANKS PAGES **************************/
+
+ .thanks-body {
+            
+            
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .thanks-container {
+            background-color: var(--clr-light-purple);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        .logo-container {
+            margin-bottom: 25px;
+        }
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+        }
+        .thanks-container h1 {
+            color: VAR(--clr-medium-purple); /* Codelets Primary Purple */
+            font-size: 2em;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .thanks-container p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .payment-options {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .payment-options h2 {
+            font-size: 1.5em;
+            color: VAR(--clr-medium-purple); /* Darker Purple */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .payment-method {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .payment-method p {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        .payment-button {
+            display: inline-block;
+            background-color: var(--clr-lime-green); /* Codelets Yellow */
+            color: var(--clr-light-purple) !important;
+            padding: 12px 30px;
+            text-decoration: none !important;
+            font-weight: 600;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .payment-button:hover {
+            background-color: var(--clr-medium-purple);
+            transform: translateY(-2px);
+        }
+        .etransfer-details strong {
+            color: var(--clr-medium-purple);
+        }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .thanks-container a {
+            color: var(--clr-lime-green); 
+            text-decoration: none;
+        }
+       .thanks-container a:hover {
+            text-decoration: underline;
+        }
+
+ /* Responsive adjustments for the program list grid */
+ @media (max-width: 768px) {
+
+     .navbar {
+         padding-left: 0;
+         padding-right: 0;
+     }
+
+     /* Adjusted breakpoint */
+     .program-list {
+         width: 90%;
+         /* Use more width on medium screens */
+     }
+
+     .program-section-title {
+         font-size: 2em;
+     }
+
+     .program-block,
+     .program-block.alt {
+         flex-direction: column;
+         /* Stack image and text vertically */
+         padding: 20px;
+     }
+
+     .program-image,
+     .program-details {
+         flex: 0 0 100%;
+         /* Full width for both */
+         padding-left: 0;
+         /* Reset padding for stacked layout */
+         padding-right: 0;
+     }
+
+     .program-image {
+         margin-bottom: 20px;
+         /* Space between stacked image and text */
+     }
+
+     .program-block.alt .program-image {
+         order: 0;
+         /* Reset order for stacking */
+         margin-bottom: 20px;
+     }
+
+
+     .program-filter-bar-container {
+         text-align: center;
+     }
+
+     .filter-button {
+         /* Adjust padding/font for very small screens if they still look too big */
+         padding: 8px 15px;
+         font-size: 0.9em;
+     }
+
+     .modal-content {
+         width: 90%;
+         margin: 15% auto;
+     }
+ }
+
+ @media (max-width: 576px) {
+     .hero-section .subtitle {
+         margin-bottom: 2em;
+     }
+
+     .theme-block .theme-icon img {
+         width: 70px;
+         height: auto;
+     }
+
+     .program-list {
+         grid-template-columns: 1fr;
+         /* Stack to single column */
+         width: 95%;
+         padding: 10px;
+         gap: 10px;
+         margin-bottom: 2em;
+         /* Adjust space */
+     }
+
+     .program-list li {
+         font-size: 0.9em;
+         padding: 5px 0;
+         text-align: left;
+     }
+
+     .program-list li i {
+         font-size: 1.2em;
+
+     }
+
+     .weekly-themes-container {
+         grid-template-columns: none;
+     }
+
+     /* Contact Form adjustments */
+     .contact-form-container {
+         padding: 20px 25px;
+         /* Reduce form padding */
+         width: 95%;
+         /* Allow form to use full width */
+     }
+
+     .contact-form-container h2 {
+         font-size: 1.5em;
+         /* Smaller form heading */
+     }
+
+     .contact-form-container label {
+         font-size: 0.95em;
+         /* Slightly smaller labels */
+     }
+
+     .contact-form-container .form-control {
+         padding: 10px;
+         /* Slightly smaller input padding */
+         font-size: 0.95em;
+     }
+
+     .contact-form-container .btn-submit {
+         font-size: 1em;
+         /* Smaller button text */
+         padding: 8px 25px;
+     }
+
+     .contact-form-container .form-check-label {
+         font-size: 0.9em;
+         /* Smaller checkbox label */
+     }
+ }
