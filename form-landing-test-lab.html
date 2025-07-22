@@ -56,50 +56,36 @@
 
             
 
-        <div class="program-block alt" data-program-type="camps">
+       <div class="program-block" data-program-type="test-lab">
             <div class="program-image">
-                <img src="/img/mine-sr.png" alt="Minecraft Camp">
+                <img src="/img/test-lab.jpg" alt="Test Lab">
             </div>
             <div class="program-details">
-                <h2>Minecrafters: Brick to Build + Code</h2>
-                <p class="sub-headline">From Physical Blocks to Digital Worlds!</p>
-                <p>an engaging build and code challenge where imagination meets engineering, and the physical world
-                    becomes digital <strong>(AGES
-                        6-12)</strong></p>
-
-                <div class="program-info-location" >
+                <h2>codelets Test Lab</h2>
+                <p class="sub-headline">Join us for a selection of themed stem explorations and experiments</p>
+                <p>share a moment (or two) of wonder with us: codelets test lab sessions offer something special for
+                    every age and stage, from 3 to 103</p>
+                <div class="program-info-location">
+                    <h3>Upcoming Themes</h3>
                     <div class="weekly-themes-container">
+                        
                         <div class="theme-block">
-                            <span class="theme-icon"><img src="img/build-icon.png"></span>
+                            <span class="theme-icon">
+                                <img src="img/platform-icon.png">
+                            </span>
                             <span class="theme-text">
-                                <span class="theme-title">Imagine & Build</span>
-                                <span class="theme-tools">plan and construct a unique structure using magnetic
-                                    blocks</span>
+                                <span class="theme-title">PLATFORMER PARTY!</span>
+                                <span class="theme-tools">levels & skills</span>
                             </span>
                         </div>
-                        <div class="theme-block">
-                            <span class="theme-icon"><img src="img/sketch-icon.png"></span>
-                            <span class="theme-text">
-                                <span class="theme-title">Sketch & Devise</span>
-                                <span class="theme-tools">translate your design to paper and formulate your secret activation</span>
-                            </span>
-                        </div>
-                        <div class="theme-block">
-                            <span class="theme-icon"><img src="img/place-icon.png"></span>
-                            <span class="theme-text">
-                                <span class="theme-title">Construct & Code</span>
-                                <span class="theme-tools">recreate your design in minecraft and power it up with command block logic</span>
-                            </span>
-                        </div>
-                        <div class="theme-block">
-                            <span class="theme-icon"><img src="img/show-icon.png"></span>
-                            <span class="theme-text">
-                                <span class="theme-title">Present & Reveal</span>
-                                <span class="theme-tools">share your masterpiece and unveil your hidden feature
-                                </span>
-                            </span>
-                        </div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/fruit-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">FRUITY JAMS</span><span
+                                    class="theme-tools">music & movement</span></span></div>
+                        <!-- <div class="theme-block"><span class="theme-icon"><img src="img/game-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">GAMES & GADGETS</span><span
+                                    class="theme-tools">tinker & play</span></span></div> -->
                     </div>
+
                     <div class="program-info-grid">
 
                         <div class="info-item">
@@ -107,24 +93,23 @@
                                 <strong>Location:</strong> Do Good Oxford (Woodstock)
                             </div>
                             <div class="mb-2">
-                                <strong>Date:</strong> Monday, July 28
+                                <strong>Dates:</strong> Tuesdays - July 22, 29 & Aug 5, 12, 19, 26
                             </div>
                             <div class="mb-2">
-                                <strong>Time:</strong> 9:00 AM - 2:00 PM<br>
-                                (supervised, non-instructional before care available from 8:30)
+                                <strong>Time:</strong> 6 PM - 7:30 PM<br>
+                                (arrive anytime, stay as long as you like)
                             </div>
                         </div>
                         <div class="info-item blob">
-                            <img src="img/80.png" alt="Program Fee">
+                            <img src="img/20.png" alt="Program Fee">
                         </div>
                     </div>
                 </div>
 
                 <a href="#" class="enroll-button"
-                    onclick="openModal('minecraft-sr-form', 'Minecraft Sr. Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    onclick="openModal('test-lab-form', 'Test Lab Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
                     Now!</a>
             </div>
-        </div>
         </div>
 
        
@@ -158,6 +143,20 @@
 
                     <label for="childAge">Child's Age (at time of program):</label>
                     <input type="number" id="childAge" name="child_age" required min="3" max="14">
+
+                    <div id="sessionSelectTestLabDiv">
+                        <label for="sessionSelectTestLab">Select Test Lab Date:</label>
+                        <select id="sessionSelectTestLab" name="selected_session_test_lab">
+                            <option value="">--Please choose a date--</option>
+                            <!-- <option value="july15">July 15</option> -->
+                            <option value="july22">July 22</option>
+                            <option value="july29">July 29</option>
+                            <option value="aug5">August 5</option>
+                            <option value="aug12">August 12</option>
+                            <option value="aug19">August 19</option>
+                            <option value="aug26">August 26</option>
+                        </select>
+                    </div>
 
                     <label for="stem-experience">Does your child have any previous experience with STEM topics (summer
                         camps, city programs, elective classes, etc):</label>
@@ -207,6 +206,8 @@
         const programNameInput = document.getElementById('programNameInput'); // Hidden input in the form
         const sampleForm = document.getElementById('sample-formspree-form');
 
+        const sessionSelectTestLabDiv = document.getElementById('sessionSelectTestLabDiv');
+
         const formspreeEndpoints = {
             'sparks-co-form': 'xzzrqwrz', // Replace with actual
             'curiosity-ignite-form': 'movdzbde', // Replace
@@ -219,9 +220,9 @@
         };
 
         function openModal(formId, programNameForDisplay, programType) {
-            const programNameClean = 'Minecraft Sr.';
-            formId = formId ?? 'minecraft-sr-form';
-            modalTitle.textContent = programNameForDisplay ?? 'Minecraft Sr. Registration';
+            const programNameClean = 'Test Lab';
+            formId = formId ?? 'test-lab-form';
+            modalTitle.textContent = programNameForDisplay ?? 'Test Lab Registration';
     
             programNameInput.value = programNameClean; // Set the value for the hidden input
 
