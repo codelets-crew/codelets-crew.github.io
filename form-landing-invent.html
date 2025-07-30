@@ -52,62 +52,56 @@
     </div>
 
 
-    <div class="program-section">
 
-            
-
-       <div class="program-block" data-program-type="test-lab">
+        <div class="program-section">
+         <div class="program-block" data-program-type="classes">
             <div class="program-image">
-                <img src="/img/test-lab.jpg" alt="Test Lab">
+                <img src="/img/invent.jpg" alt="Inventors Program Image">
             </div>
             <div class="program-details">
-                <h2>codelets Test Lab</h2>
-                <p class="sub-headline">Join us for a selection of themed stem explorations and experiments</p>
-                <p>share a moment (or two) of wonder with us: codelets test lab sessions offer something special for
-                    every age and stage, from 3 to 103</p>
+                <h2>Inventors: Create + Connect</h2>
+                <p class="sub-headline">Encourage exploration of all the whys and hows</p>
+                <p>a hands-on stem expedition for curious creators ready to tinker, code, and light things up
+                    <strong>(AGES 7–10)</strong>
+                </p>
                 <div class="program-info-location">
-                    <h3>Upcoming Themes</h3>
+                    <h3>Weekly Themes:</h3>
+
                     <div class="weekly-themes-container">
-                        
                         <div class="theme-block">
                             <span class="theme-icon">
-                                <img src="img/platform-icon.png">
+                                <img src="img/circuits-icon.png">
                             </span>
                             <span class="theme-text">
-                                <span class="theme-title">PLATFORMER PARTY!</span>
-                                <span class="theme-tools">levels & skills</span>
+                                <span class="theme-title">Snap Zone</span>
+                                <span class="theme-tools">circuits</span>
                             </span>
                         </div>
-                        <div class="theme-block"><span class="theme-icon"><img src="img/fruit-icon.png"></span> <span
-                                class="theme-text"><span class="theme-title">FRUITY JAMS</span><span
-                                    class="theme-tools">music & movement</span></span></div>
-                        <!-- <div class="theme-block"><span class="theme-icon"><img src="img/game-icon.png"></span> <span
-                                class="theme-text"><span class="theme-title">GAMES & GADGETS</span><span
-                                    class="theme-tools">tinker & play</span></span></div> -->
+                        <div class="theme-block"><span class="theme-icon"><img src="img/robo-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Colour Quest</span><span
+                                    class="theme-tools">robotics</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/coding-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Hello World</span><span
+                                    class="theme-tools">coding</span></span></div>
+                        <div class="theme-block"><span class="theme-icon"><img src="img/making-icon.png"></span> <span
+                                class="theme-text"><span class="theme-title">Operation Operation!</span><span
+                                    class="theme-tools">making</span></span></div>
                     </div>
-
                     <div class="program-info-grid">
-
                         <div class="info-item">
-                            <div class="mb-2">
-                                <strong>Location:</strong> Do Good Oxford (Woodstock)
-                            </div>
-                            <div class="mb-2">
-                                <strong>Dates:</strong> Tuesdays - July 22, 29 & Aug 5, 12, 19, 26
-                            </div>
-                            <div class="mb-2">
-                                <strong>Time:</strong> 6 PM - 7:30 PM<br>
-                                (arrive anytime, stay as long as you like)
-                            </div>
+                            <div class="mb-2"><strong>Location:</strong> Do Good Oxford (Woodstock)</div>
+                            <div class="mb-2"><strong>Day & Time:</strong> Tuesdays, 5 PM - 5:50 PM</div>
+                            <div>Aug 5,
+                                12, 19, 26</div>
                         </div>
                         <div class="info-item blob">
-                            <img src="img/20.png" alt="Program Fee">
+                            <img src="img/150.png" alt="Program Fee">
                         </div>
                     </div>
                 </div>
 
                 <a href="#" class="enroll-button"
-                    onclick="openModal('test-lab-form', 'Test Lab Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
+                    onclick="openModal('inventors-connect-form', 'Inventors: Create + Connect Registration', this.closest('.program-block').dataset.programType); return false;">Enroll
                     Now!</a>
             </div>
         </div>
@@ -143,20 +137,6 @@
 
                     <label for="childAge">Child's Age (at time of program):</label>
                     <input type="number" id="childAge" name="child_age" required min="3" max="14">
-
-                    <div id="sessionSelectTestLabDiv">
-                        <label for="sessionSelectTestLab">Select Test Lab Date:</label>
-                        <select id="sessionSelectTestLab" name="selected_session_test_lab">
-                            <option value="">--Please choose a date--</option>
-                            <!-- <option value="july15">July 15</option> -->
-                            <option value="july22">July 22</option>
-                            <option value="july29">July 29</option>
-                            <option value="aug5">August 5</option>
-                            <option value="aug12">August 12</option>
-                            <option value="aug19">August 19</option>
-                            <option value="aug26">August 26</option>
-                        </select>
-                    </div>
 
                     <label for="stem-experience">Does your child have any previous experience with STEM topics (summer
                         camps, city programs, elective classes, etc):</label>
@@ -220,9 +200,9 @@
         };
 
         function openModal(formId, programNameForDisplay, programType) {
-            const programNameClean = 'Test Lab';
-            formId = formId ?? 'test-lab-form';
-            modalTitle.textContent = programNameForDisplay ?? 'Test Lab Registration';
+            const programNameClean = 'Inventors: Create + Connect';
+            formId = formId ?? 'inventors-connect-form';
+            modalTitle.textContent = programNameForDisplay ?? 'Inventors: Create + Connect Registration';
     
             programNameInput.value = programNameClean; // Set the value for the hidden input
 
