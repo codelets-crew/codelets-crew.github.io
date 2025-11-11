@@ -134,6 +134,28 @@
      color: var(--clr-white);
  }
 
+ .hero-section .banner {
+  background-color: rgba(134, 115, 202, 0.15);
+  color: #FFF;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 9999px;
+  border: 1px solid #fff;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(5px);
+}
+
+ .hero-section .banner h2 {
+    margin-bottom: 0;
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+ }
+
+ .hero-section .banner p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+ }
+
  /* --- Program List Styling (Grid Layout - Added) --- */
  .program-list {
      /* Container Styling */
@@ -858,6 +880,14 @@
          padding-left: 0;
          padding-right: 0;
      }
+      .hero-section .banner h2 {
+    margin-bottom: 0;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.5rem;
+ }
+  .hero-section .banner p {
+    font-size: 1rem;
+ }
 
      /* Adjusted breakpoint */
      .program-list {
