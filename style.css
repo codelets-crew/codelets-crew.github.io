@@ -471,6 +471,13 @@
      margin-bottom: 25px;
  }
 
+ .camp-theme .theme-block {
+    text-align: center !important;
+ }
+ .info-item img {
+    max-height: 125px;
+ }
+
  .theme-block {
      /* Styling for each weekly theme block */
      background-color: var(--clr-lime-green);
@@ -639,7 +646,7 @@
 
  .program-info-grid .blob img {
      max-width: 100%;
-     max-height: 150px;
+     max-height: 250px;
      height: auto;
      display: block;
      object-fit: contain;
@@ -888,6 +895,23 @@
   .hero-section .banner p {
     font-size: 1rem;
  }
+   .program-info-grid {
+    flex-direction: column;      /* stack instead of row */
+    align-items: stretch;        /* let items fill width */
+  }
+
+  .program-info-grid .info-item,
+  .program-info-grid .info-item.blob {
+    flex: 1 1 100%;              /* full-width columns */
+    text-align: left;            /* optional: keep text left */
+  }
+
+  /* optional: center the blob nicely under the text */
+  .program-info-grid .info-item.blob {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }d
 
      /* Adjusted breakpoint */
      .program-list {
@@ -977,6 +1001,7 @@
      .weekly-themes-container {
          grid-template-columns: none;
      }
+
 
      /* Contact Form adjustments */
      .contact-form-container {
