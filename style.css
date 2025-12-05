@@ -1077,6 +1077,12 @@
      .weekly-themes-container {
          grid-template-columns: none;
      }
+.navbar>.container-fluid {
+    flex-direction: column;
+}
+      .nav-link {
+        font-size: 1em;
+    }
 
 
      /* Contact Form adjustments */
