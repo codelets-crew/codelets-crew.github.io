@@ -214,13 +214,13 @@
                         </div>
                         <div class="info-item item-flex" data-studio-type="standalone">
                             <div><strong>Lite: </strong>$160 | <strong>Pro: </strong>$300</div>
-                            <div>with core <strong>Lite: </strong>$130 | <strong>Pro: </strong>$250</div>
+                            <div>with core/playground <strong>Lite: </strong>$130 | <strong>Pro: </strong>$250</div>
                             <a href="#" class="enroll-button"
                                 onclick="openModal('studio-form', 'Studio Membership', 'studio-standalone'); return false;">Join
                                 Now!</a>
                         </div>
                     </div>
-                    <p class="d-purple"><strong>BONUS OFFER:</strong> Add a studio membership to any core session for a
+                    <p class="d-purple"><strong>BONUS OFFER:</strong> Add a studio membership to any core or playground session for a
                         substantial discount!</p>
                 </div>
 
@@ -380,7 +380,7 @@
                             </div>
                         </div>
 
-                        <div class="conditional-group">
+                        <!-- <div class="conditional-group">
                             <label for="addStudioCheck">
                                 <input type="checkbox" id="addStudioCheck" name="add_studio_membership" value="Yes">
                                 Add a Discounted Studio Membership?
@@ -398,13 +398,14 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        c
                     </div>
                     <div id="studioStandaloneFields" style="display:none;">
                         <h4>Studio Membership Tier Selection</h4>
                         <div class="radio-group-container">
                             <label>
-                                <input type="radio" name="studio_standalone_tier" value="Studio Lite" required>
+                                <input type="radio" name="studio_standalone_tier" value="Studio Lite">
                                 Studio Lite ($160)
                             </label>
                             <label>
@@ -435,6 +436,7 @@
                             <option value="playground_a">Block A: Tuesdays, 4:45-5:45 PM</option>
                             <option value="playground_b">Block B: Sundays, 1:15-2:15 PM</option>
                         </select>
+                        <p>** Want to add a discounted studio membership to your core program? Choose your tier when you checkout via square after submitting this registration form!</p>
                     </div>
 
                     <div id="sessionSelectTestLabDiv" style="display:none;">
@@ -542,8 +544,8 @@
         const coreBlockSelect = document.getElementById('coreBlockSelect'); // Single select
         const codingBlockBoth = document.getElementById('codingBlockBoth'); // Dual select
         const tinkeringBlockBoth = document.getElementById('tinkeringBlockBoth'); // Dual select
-        const addStudioCheck = document.getElementById('addStudioCheck');
-        const studioAddOnOptions = document.getElementById('studioAddOnOptions');
+        // const addStudioCheck = document.getElementById('addStudioCheck');
+        // const studioAddOnOptions = document.getElementById('studioAddOnOptions');
         const studioStandaloneRadios = document.querySelectorAll('input[name="studio_standalone_tier"]');
         const finalComboType = document.getElementById('finalComboType');
 
@@ -573,11 +575,11 @@
             studioStandaloneFields.style.display = 'none';
             singleBlockSelect.style.display = 'none';
             dualBlockSelect.style.display = 'none';
-            studioAddOnOptions.style.display = 'none';
+            // studioAddOnOptions.style.display = 'none';
 
             // Reset all core/studio specific inputs
             coreStreamRadios.forEach(radio => radio.checked = false);
-            addStudioCheck.checked = false;
+            // addStudioCheck.checked = false;
             coreBlockSelect.value = '';
             codingBlockBoth.value = '';
             tinkeringBlockBoth.value = '';
@@ -595,10 +597,17 @@
             codingBlockBoth.value = '';
             tinkeringBlockBoth.value = '';
 
+            coreBlockSelect.removeAttribute('required');
+            codingBlockBoth.removeAttribute('required');
+            tinkeringBlockBoth.removeAttribute('required');
+
             if (streamValue === 'Both') {
                 dualBlockSelect.style.display = 'block';
+                codingBlockBoth.setAttribute('required', 'required');
+                tinkeringBlockBoth.setAttribute('required', 'required');
             } else if (streamValue === 'Coding' || streamValue === 'Tinkering') {
                 singleBlockSelect.style.display = 'block';
+                coreBlockSelect.setAttribute('required', 'required');
 
                 // Update single select options to show only relevant blocks (optional but recommended)
                 // Since blocks are hardcoded in the HTML, we'll just preselect/filter the displayed options
@@ -658,11 +667,11 @@
                 updateCoreBlockSelection(initialStream);
 
                 // Add required attribute to the primary block select fields
-                coreStreamRadios.forEach(radio => radio.setAttribute('required', 'required')); // <-- ADD THIS LINE
+                coreStreamRadios.forEach(radio => radio.setAttribute('required', 'required')); 
 
-                coreBlockSelect.setAttribute('required', 'required');
-                codingBlockBoth.setAttribute('required', 'required');
-                tinkeringBlockBoth.setAttribute('required', 'required');
+                // coreBlockSelect.setAttribute('required', 'required');
+                // codingBlockBoth.setAttribute('required', 'required');
+                // tinkeringBlockBoth.setAttribute('required', 'required');
 
             } else if (programType === 'studio-standalone') {
                 studioStandaloneFields.style.display = 'block';
@@ -729,13 +738,13 @@
         });
 
         // Studio Add-on Checkbox Listener (to show/hide tier options)
-        addStudioCheck.addEventListener('change', function () {
-            if (this.checked) {
-                studioAddOnOptions.style.display = 'block';
-            } else {
-                studioAddOnOptions.style.display = 'none';
-            }
-        });
+        // addStudioCheck.addEventListener('change', function () {
+        //     if (this.checked) {
+        //         studioAddOnOptions.style.display = 'block';
+        //     } else {
+        //         studioAddOnOptions.style.display = 'none';
+        //     }
+        // });
 
         // ===========================================
         // END NEW EVENT LISTENERS
