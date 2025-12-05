@@ -582,6 +582,7 @@
             codingBlockBoth.value = '';
             tinkeringBlockBoth.value = '';
             studioStandaloneRadios.forEach(radio => radio.checked = false);
+            coreStreamRadios.forEach(radio => radio.removeAttribute('required'));
         }
 
 
@@ -657,6 +658,8 @@
                 updateCoreBlockSelection(initialStream);
 
                 // Add required attribute to the primary block select fields
+                coreStreamRadios.forEach(radio => radio.setAttribute('required', 'required')); // <-- ADD THIS LINE
+
                 coreBlockSelect.setAttribute('required', 'required');
                 codingBlockBoth.setAttribute('required', 'required');
                 tinkeringBlockBoth.setAttribute('required', 'required');
