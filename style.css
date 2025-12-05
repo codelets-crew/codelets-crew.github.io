@@ -974,7 +974,13 @@
   .program-info-grid .info-item.blob {
     flex: 1 1 100%;              /* full-width columns */
     text-align: left;            /* optional: keep text left */
-  }
+  } 
+  
+  .item-flex {
+   
+    align-items:center;
+ }
+
 
   /* optional: center the blob nicely under the text */
   .program-info-grid .info-item.blob {
