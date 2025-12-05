@@ -114,6 +114,9 @@
      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
  }
 
+ .hero-section a {
+    text-decoration: none;
+ }
  .fancy {
      text-shadow: 0px 0px 5px rgba(203, 194, 253, 0.2);
      background: rgb(131 116 196 / 52%);
@@ -154,6 +157,10 @@
  .hero-section .banner p {
     margin-bottom: 0;
     font-size: 1.5rem;
+ }
+
+ .hero-section .banner:hover {
+    background-color: rgb(106 105 112 / 49%);
  }
 
  /* --- Program List Styling (Grid Layout - Added) --- */
@@ -456,6 +463,11 @@
      box-sizing: border-box;
  }
 
+.main-programs .program-details {
+    flex:auto;
+    padding-left:none;
+}
+
  .program-info-location {
      background-color: var(--clr-light-purple);
      padding: 15px;
@@ -584,6 +596,8 @@
      position: relative;
      margin-bottom: 8px;
      line-height: 1.6;
+    color: #000;
+    font-size: 1.2em;
  }
 
  .program-details ul li::before {
@@ -606,7 +620,7 @@
      gap: 12px;
      /* ADDED for spacing between items */
      margin-bottom: 25px;
-     font-size: 1em;
+     font-size: 1.4em;
      background-color: var(--clr-medium-purple);
      padding: 15px;
      border-radius: 8px;
@@ -620,6 +634,22 @@
      padding: 5px;
      /* Inner padding for content within the item */
 
+ }
+
+ .item-flex {
+    display: flex;
+    flex-direction: column;
+    align-items:end;
+ }
+
+.program-details h3 {
+    font-size: 1.7em;
+}
+
+ .program-details h4 {
+    color: #8673ca;
+    font-weight: 600;
+    font-size: 1.6em;
  }
 
  .program-session-dates-item {
@@ -652,6 +682,9 @@
      object-fit: contain;
  }
 
+ .d-purple strong {
+    color:#8673ca;
+ }
 
  .enroll-button {
      display: inline-block;
@@ -666,7 +699,7 @@
      /* Bolder */
      border-radius: 8px;
      text-align: center;
-     margin-top: 20px;
+     /* margin-top: 20px; */
      transition: background-color 0.2s ease, transform 0.2s ease;
      border: 3px solid var(--clr-medium-purple);
      cursor: pointer;
@@ -684,6 +717,43 @@
      transform: translateY(-2px);
      /* Slight lift effect */
  }
+
+ /* CSS to improve layout for the new radio/select groups */
+        .radio-group-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .radio-group-container label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            margin-bottom: 0;
+            width: auto;
+            /* Allow labels to size based on content */
+        }
+
+        .radio-group-container input[type="radio"] {
+            margin-right: 5px;
+            margin-bottom: 0;
+            /* Fix alignment */
+        }
+
+        /* Styling for conditional field groups */
+        .conditional-group {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .conditional-group label {
+            margin-top: 5px;
+            /* Spacing for labels inside the group */
+        }
 
  /* Basic Modal Styles (you'll need JavaScript for full functionality) */
  .modal {
